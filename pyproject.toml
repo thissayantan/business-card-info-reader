@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "business-card-info-reader"
+version = "0.1.0"
+description = ""
+authors = ["Sayantan <this.sayantan@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.scripts]
+business-card-info-reader = 'business_card_info_reader.main:main'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
