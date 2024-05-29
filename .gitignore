@@ -9,6 +9,9 @@ ENV/
 .venv/
 .env/
 
+# env files
+.env
+
 # Distribution / packaging
 build/
 dist/
