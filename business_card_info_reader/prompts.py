@@ -1,6 +1,6 @@
 def get_business_card_analysis_prompt():
     return """
-    First, determine if the image provided is likely a business card. If it is, analyze the image and extract the information. Return the data in a structured JSON format including fields for:
+    First, determine if the image provided is likely a business card. If it is, analyze the image and extract the information. Return the data in a structured JSON format. Field names should be in camel case, including fields for:
     - Full name
     - Job title
     - Company name
