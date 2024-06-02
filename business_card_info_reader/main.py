@@ -19,7 +19,7 @@ def main():
     image_url = args.image_url if args.image_url else business_cards[0]
 
     # Default to OpenAIModel if no model is provided
-    model = GoogleGeminiModel() if args.model_name else OpenAIModel()
+    model = GoogleGeminiModel() if args.model_name == "gemini" else OpenAIModel()
 
     response = model.analyze_image(image_url)
     print(response)  # For demonstration, directly print the response
