@@ -29,16 +29,23 @@ class OpenAIModel(BaseModel):
         response = self.client.chat.completions.create(
             model="gpt-4o",
             messages=[
-                {"role": "user", "content": prompt},
                 {
-                    "role": "system",
-                    "content": {
-                        "type": "image_url",
-                        "image_url": image_url,
-                    },
-                },
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": prompt,
+                        },
+                        {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": image_url,
+                            },
+                        },
+                    ],
+                }
             ],
-            max_tokens=1024,
+            max_tokens=300,
         )
         return response.choices[0].message.content
 
