@@ -30,7 +30,7 @@ This project uses Poetry for dependency management. To set up the project:
 Run the application using the following command:
 
 ```bash
-poetry run python main.py --image_url [IMAGE_URL] --model_name [MODEL_NAME]
+poetry run business-card-info-reader --image_url [IMAGE_URL] --model_name [MODEL_NAME]
 ```
 
 - `IMAGE_URL` (optional): URL of the business card image to analyze. If not provided, a default image is used.
@@ -38,7 +38,7 @@ poetry run python main.py --image_url [IMAGE_URL] --model_name [MODEL_NAME]
 
 Example:
 ```bash
-poetry run python main.py --image_url "http://example.com/image.jpg" --model_name "google"
+poetry run business-card-info-reader --image_url "https://www.brandly.com/blog/img/uploads/7file-10_awesome_socialmedia_icons.jpg" --model_name "gemini"
 ```
 
 ## Configuration
